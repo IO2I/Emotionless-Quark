@@ -40,8 +40,6 @@ public class ClientProxy extends CommonProxy {
 		resourceProxy = new ResourceProxy(event.getSourceFile());
 		packs.add(resourceProxy);
 
-		EmoteSystem.addResourcePack(packs);
-
 		super.preInit(event);
 		ModuleLoader.preInitClient(event);
 
