@@ -27,7 +27,6 @@ public class MessageRegister {
 
 	@SuppressWarnings("unchecked")
 	public static void init() {
-		NetworkHandler.register(MessageDoEmote.class, Side.CLIENT);
 		NetworkHandler.register(MessageDropoff.class, Side.SERVER);
 		NetworkHandler.register(MessageSwapItems.class, Side.SERVER);
 		NetworkHandler.register(MessageRestock.class, Side.SERVER);
@@ -43,7 +42,6 @@ public class MessageRegister {
 		NetworkHandler.register(MessageUpdateAfk.class, Side.SERVER);
 		NetworkHandler.register(MessageRequestPassengerChest.class, Side.SERVER);
 		NetworkHandler.register(MessageHandleBackpack.class, Side.SERVER);
-		NetworkHandler.register(MessageRequestEmote.class, Side.SERVER);
 		NetworkHandler.register(MessageMatrixEnchanterOperation.class, Side.SERVER);
 		NetworkHandler.register(MessageSyncBoatBanner.class, Side.CLIENT);
 		NetworkHandler.register(MessageItemUpdate.class, Side.CLIENT);
