@@ -16,15 +16,11 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 import vazkii.quark.base.lib.LibObfuscation;
-import vazkii.quark.vanity.client.emotes.EmoteDescriptor;
-import vazkii.quark.vanity.client.emotes.EmoteHandler;
 
 import java.util.HashMap;
 import java.util.List;
 
 public class ModKeybinds {
-
-	public static final HashMap<KeyBinding, String> emoteKeys = new HashMap<>();
 
 	public static final BiMap<KeyBinding, IParentedGui> keyboundButtons = HashBiMap.create();
 
@@ -42,15 +38,6 @@ public class ModKeybinds {
 	
 	private static final String MISC_GROUP = "quark.gui.keygroupMisc";
 	private static final String INV_GROUP = "quark.gui.keygroupInv";
-	private static final String EMOTE_GROUP = "quark.gui.keygroupEmote";
-
-	public static void initEmoteKeybinds() {
-		for(String emoteName : EmoteHandler.emoteMap.keySet()) {
-			EmoteDescriptor desc = EmoteHandler.emoteMap.get(emoteName);
-			KeyBinding key = init(desc.getTranslationKey(), 0, EMOTE_GROUP, false);
-			emoteKeys.put(key, emoteName);
-		}
-	}
 
 	public static void initLockKey() {
 		lockKey = init("lockBuilding", Keyboard.KEY_K, MISC_GROUP);
