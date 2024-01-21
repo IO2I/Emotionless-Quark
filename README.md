@@ -1,5 +1,7 @@
 # Quark
-Small things.
+Small things without emotions.
+
+A fork of quark without emotes for compatibility reasons
 
 This mod requires [AutoRegLib](https://github.com/Vazkii/AutoRegLib).
 
