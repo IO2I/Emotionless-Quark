@@ -52,7 +52,6 @@ import vazkii.quark.misc.feature.*;
 import vazkii.quark.tweaks.feature.HoeSickle;
 import vazkii.quark.tweaks.feature.ImprovedSleeping;
 import vazkii.quark.tweaks.feature.SpringySlime;
-import vazkii.quark.vanity.client.emotes.EmoteHandler;
 import vazkii.quark.vanity.client.render.BoatBannerRenderer;
 import vazkii.quark.vanity.feature.BoatSails;
 import vazkii.quark.vanity.feature.WitchHat;
@@ -62,12 +61,6 @@ import javax.annotation.Nullable;
 
 @SuppressWarnings("unused")
 public final class ASMHooks {
-
-	// ===== EMOTES ===== //
-	
-	public static void updateEmotes(Entity e) {
-		EmoteHandler.updateEmotes(e);
-	}
 
 	// ===== COLOR RUNES ===== //
 	
