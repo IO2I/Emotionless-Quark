@@ -27,8 +27,6 @@ import vazkii.quark.base.client.ResourceProxy;
 import vazkii.quark.base.client.gui.config.ConfigEvents;
 import vazkii.quark.base.lib.LibObfuscation;
 import vazkii.quark.base.module.ModuleLoader;
-import vazkii.quark.vanity.client.emotes.EmoteHandler;
-import vazkii.quark.vanity.feature.EmoteSystem;
 
 import java.util.List;
 
@@ -64,14 +62,6 @@ public class ClientProxy extends CommonProxy {
 	public void postInit(FMLPostInitializationEvent event) {
 		super.postInit(event);
 		ModuleLoader.postInitClient(event);
-	}
-
-	@Override
-	public void doEmote(String playerName, String emoteName, int tier) {
-		World world = Minecraft.getMinecraft().world;
-		EntityPlayer player = world.getPlayerEntityByName(playerName);
-		if(player instanceof AbstractClientPlayer)
-			EmoteHandler.putEmote((AbstractClientPlayer) player, emoteName, tier);
 	}
 
 	@Override
